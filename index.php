@@ -1,87 +1,9 @@
 <pre>
 <?php
-
-
-/**
- * Restituisce una stringa numerica lunga n caratteri, i cui valori vanno da un valore minimo a uno massimo. Minimo, massimo e lunghezza sono defibili in questo ordine dall'utente. 
- */
-function random_string($min, $max, $n)
-{
-   $StringNumber="";
-    for ($i=0; $i <$n; $i++) { 
-        $StringNumber.=random_int($min,$max);
-    }
-    return $StringNumber;
-}
-
-/**
- * Restituisce una combinazione casuale di mese/anno. L'anno può assuemre valori tra oggi e avanti di 10 anni.
- */
-function random_Date()
-{
-    $month= mt_rand(1,12);
-    $year=mt_rand(date("y"), date("y")+10);
-   return $final_Date=$month . "/". $year;
-   
-}
-
-
-
-class Product
-{
-    public $name;
-    public $category;
-    public $description;
-    public $price;
-    public $qty;
-
-    function __construct(string $name, string $category, string $description, Float $price, Int $qty)
-    {
-        $this->name=$category;
-        $this->category=$category;
-        $this->description=$description;
-        $this->price=$price;
-        $this->qty=$qty;
-    }
-}
-
-class User
-{
-    protected $name;
-    protected $lname;
-
-    function __construct(string $name, string $lname)
-    {
-        $this->name=$name;
-        $this->lname=$lname;
-    }
-    public function getName()
-    {
-        return $this->name;
-    }
-    
-    
-}
-
-
-class CreditCard extends User
-{
-    protected $AccountNumber;
-    protected $ExpDate;
-    protected $Bin;
-
-    function __construct(string $name, string $lname, int $AccountNumber, string $ExpDate, int $Bin)
-    {
-        parent::__construct($name, $lname);
-        $this->AccountNumber = $AccountNumber;
-        $this->ExpDate=$ExpDate;
-        $this->Bin=$Bin;
-    }
-
-
-
-}
-
+// Importo le funzioni
+require('common/functions.php');
+//Importo le classi
+require('common/classes.php');
 
 //ISTANZE PRODOTTO
 
@@ -104,16 +26,25 @@ $clients=[
     new User('Giulia', 'Di Miele')
 ];
 
-//ISTANZE CreditCard
-$cards=[
-    new CreditCard('Andrea', 'Monti', random_string(0,9,16), random_Date(),random_string(0,9,3)),
-    new CreditCard('Carmen', 'Galan',random_string(0,9,16), random_Date(),random_string(0,9,3)),
-    new CreditCard('Alessandro', 'Rippa',random_string(0,9,16), random_Date(),random_string(0,9,3)),
-    new CreditCard('Giulia', 'Di Miele',random_string(0,9,16), random_Date(),random_string(0,9,3))
-];
+    //ISTANZE UTENTI PREMIUM 
+    $diamond_users=[
+        new Premium('Cecilia', 'Lazzati', randomDate('01-01-2000',date('d-m-Y')), 3),
+        new Premium('Lucia', 'Gonzaga', randomDate('01-01-2000',date('d-m-Y')), 1),
+        new Premium('Marco', 'Zanotti', randomDate('01-01-2000',date('d-m-Y')), 4),
+
+    ];
+    var_dump($diamond_users);
+
+    //ISTANZE CreditCard
+    $cards=[
+        new CreditCard('Andrea', 'Monti', random_string(0,9,16), random_Date(),random_string(0,9,3)),
+        new CreditCard('Carmen', 'Galan',random_string(0,9,16), random_Date(),random_string(0,9,3)),
+        new CreditCard('Alessandro', 'Rippa',random_string(0,9,16), random_Date(),random_string(0,9,3)),
+        new CreditCard('Giulia', 'Di Miele',random_string(0,9,16), random_Date(),random_string(0,9,3))
+    ];
 
 
-var_dump($cards);
+
 
 
 
