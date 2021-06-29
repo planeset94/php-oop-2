@@ -1,22 +1,6 @@
 <?php
 
-class Product
-{
-    public $name;
-    public $category;
-    public $description;
-    public $price;
-    public $qty;
 
-    function __construct(string $name, string $category, string $description, Float $price, Int $qty)
-    {
-        $this->name=$category;
-        $this->category=$category;
-        $this->description=$description;
-        $this->price=$price;
-        $this->qty=$qty;
-    }
-}
 
 class User
 {

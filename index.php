@@ -2,8 +2,10 @@
 <?php
 // Importo le funzioni
 require('common/functions.php');
-//Importo le classi
-require('common/classes.php');
+//Importo la classe Product
+require('common/classes/product.php');
+//Importo la classe User e sottoclassi
+require('common/classes/user.php');
 
 //ISTANZE PRODOTTO
 
@@ -46,7 +48,7 @@ $clients=[
 
 
 
-
+        
 
 
 ?>
