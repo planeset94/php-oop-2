@@ -1,12 +1,14 @@
 <?php
+
+
 // Importo le funzioni
-require('../common//functions/functions.php');
+require('../../common/functions/functions.php');
 //Importo la classe Product
-require('../common/classes/product.php');
+require('../../common/classes/product.php');
 //Importo la classe User e sottoclassi
-require('../common/classes/user.php');
-require('../common/classes/premium.php');
-require('../common/classes/card.php');
+require('../../common/classes/user.php');
+require('../../common/classes/premium.php');
+require('../../common/classes/card.php');
 
 //ISTANZE PRODOTTO
 
