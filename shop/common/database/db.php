@@ -1,6 +1,7 @@
 <?php
 
 
+
 // Importo le funzioni
 require('../../common/functions/functions.php');
 //Importo la classe Product
