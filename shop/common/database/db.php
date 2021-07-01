@@ -72,7 +72,7 @@ $clients=[
     <p><?=$product->getDesc() ?></p>
     <p>Normal Price:<?=' '. $product->getNormalPrice() ?></p>
 
-    <?php if($diamond_users[2]->getDiscount()) : ?>
+    <?php if($diamond_users[0]->getDiscount()) : ?>
     <p>Price Discounted<?=' '. $product->setPrice(50) ?></p>
     <?php endif ; ?>
     <?php endforeach;?>

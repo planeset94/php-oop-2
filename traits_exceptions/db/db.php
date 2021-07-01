@@ -10,5 +10,11 @@ $sport=[
 ];
 
 
+try {
+    
+    echo $sport[0]-> setVisitors(dieci,20);
+} catch (Exception $e) {
+    echo "Exception: " . $e->getMessage();
+}
 
 ?>
